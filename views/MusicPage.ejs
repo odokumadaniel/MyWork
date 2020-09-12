@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<!-- saved from url=(0150)file:///C:/Users/sict/Downloads/W3Schools%20Offline%20Latest%202018%20[Clone%20by%20Md%20Maruf%20Adnan%20Sami]/w3css/tryw3css_templates_portfolio.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Homepage</title>
+
+<!-- Mirrored from www.w3schools.com/w3css/tryw3css_templates_portfolio.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Jul 2018 00:44:46 GMT -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="../dist/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../dist/bootstrap.min.css">
+<script src="../dist/jquery.js"></script>
+<script src="../dist/popper.js"></script>
+<script src="../dist/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../dist/custom.css">
+
+
+<script >  
+ 
+
+
+var currentuser = '<%= currentuser %>' 
+var userindex = '<%=index%>'
+var users = '<%=users%>'
+var usersarray = users.split(',')
+
+
+var parsedcurrentuser = ejsobjectparse(currentuser)
+
+
+
+
+function ejsobjectparse(testobject){
+var test1 = testobject.replace(/&#34;/g,'"')
+var test2 = test1.replace(/&#34/g,'"')   
+
+return JSON.parse(test2)
+}
+
+</script>
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+</head><body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav  class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    
+    <img src="../dist/MusicPage_files/avatar_g2.jpg" style="width:45%;" class="w3-round"><br><br>
+    <h4 id="user_name"><b>VISITOR</b></h4>
+ 
+  </div>
+  <div class="w3-bar-block">
+    <a href="#portfolio" style="display: none;" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>MUSIC MENU</a> 
+    <a id="shoppingcart" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal "><i class="fa fa-th-large fa-fw w3-margin-right"></i>Shopping Cart<span id="shoppingnumbers" class=" w3-red w3-badge">9</span></a>
+    <a id="wishlist" onclick="w3_close()" class=" w3-bar-item w3-button w3-padding w3-text-teal "><i class="fa fa-th-large fa-fw w3-margin-right"></i>Wish List<span id="wishnumbers" class=" w3-green w3-badge">0</span></a>
+  </div>
+  <div style="display: none;" class="w3-panel w3-large mt-4">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</nav>
+
+<script>
+
+</script>
+
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="../dist/MusicPage_files/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b>PRODUCTS</b></h1>
+    <div class="w3-section w3-bottombar w3-padding-16">
+      <span class="w3-cell w3-margin-right">Filter:</span> 
+      <button id="firstbutton" data-index="0" data-title="firstbutton" class="w3-button w3-white major w3-hover-black "><i class="fa fa-diamond w3-margin-right"></i>HIP HOP</button>
+      <button data-title="secondbutton" data-index="1"  class="w3-button w3-white major w3-hover-black "><i class="fa fa-photo w3-margin-right"></i>R&B</button>
+      <button  data-title = "thirdbutton" data-index="2" class="w3-button w3-white major w3-hover-black "><i class="fa fa-map-pin w3-margin-right"></i>ELECTRONIC</button>
+      <button  data-title = "fourthbutton" data-index="3" class="w3-button w3-white major w3-hover-black "><i class="fa fa-map-pin w3-margin-right"></i>AFRO</button>
+      <button  data-title = "fifthbutton" data-index="4" class="w3-button w3-white major w3-hover-black "><i class="fa fa-map-pin w3-margin-right"></i>TRAP</button>
+    
+      <span class="dropdown">
+      <button id="signupage"  style="float: right;" type="button" class="btn btn-primary dropdown-toggle w3-hide-large w3-hide-medium" data-toggle="dropdown"></button>
+      <button id="signupage"  style="float: right;" type="button" class="btn btn-primary dropdown-toggle w3-hide-small" data-toggle="dropdown">SIGN UP/LOGIN</button>
+      
+      <div style="display: none;" class="w3-light-grey dropdown-menu mr-4"  style="float: right;">
+
+   
+        
+    
+       
+    
+      </span>
+    </div>  
+    </div>
+    </div>
+  </header>
+  
+  
+<!--DemoMusic  modal -->
+    <div id="id02" class="w3-modal w3-animate-opacity">
+      <div class="w3-modal-content">
+      
+          <span id="closemodal"  class="w3-button w3-display-topright">&times;</span>
+          <div class=" w3-center">
+            <div class="w3-card-4">
+              
+              <header class="w3-container  w3-blue">
+                <h1 class="w3-xlarge w3-padding-16">Download Music</h1>
+              </header>
+          <div id="updatedclick">
+             
+            <div class="w3-padding-16">
+                <img src="../dist/Homepage_files/jeans2.jpg" style="width:25%"><br>
+              </div>
+                <button id="previewmodal" style="margin-top: 10px;" class="w3-button w3-blue">Preview</button>
+                <audio class="audiomodal" controls>
+                  <source src="horse.ogg" type="audio/ogg">
+                  <source src="horse.mp3" type="audio/mpeg">
+                </audio>
+                <div  class="w3-panel w3-leftbar w3-sand  w3-serif">
+                  <table class="w3-table-all">
+               
+                    <tr>
+                      <th>Name</th>
+                      <td id="songname">Suicidal Love</td>
+                    </tr>
+                    <tr>
+                      <th>Bpm</th>
+                      <td>198kbps</td>
+                    </tr>
+                    <tr>
+                      <th>Year</th>
+                      <td>2019</td>
+                    </tr>
+                    <tr>
+                      <th>Ratings</th>
+                      <td>Stars</td>
+                    </tr>
+                  </table>
+                </div>
+          
+              </div>
+          
+            </div>
+           
+             
+              <footer id="footer" class="w3-container">
+                <p><button  id="addtocartel" class="w3-btn w3-block w3-blue">Add to Cart<i class="fa fa-shopping-cart"></i></button></p>
+              </footer>
+         
+              <footer id="footer2" class="w3-container">
+                <p><button id="addtowishlist" class="w3-btn w3-block w3-yellow">Add to Wishlist<i class="fa fa-shopping-cart"></i></button></p>
+              </footer>
+            </div>
+       
+      </div>
+      </div>
+   
+<!--end of modal-->
+
+
+
+<!--modal -->
+<div id="id03" class="w3-modal w3-animate-opacity ">
+  <div class="w3-modal-content w3-animate-zoom  ">
+  
+      <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+      <div class="  ">
+        <div class="w3-card-4 ">
+          
+          <header class="w3-container  w3-blue">
+            <h1  class="w3-center w3-xlarge w3-padding-16"> Your Cart</h1>
+          </header>
+          <div class="w3-center">
+         
+        </div>
+         
+           
+         
+           
+              
+                  <ul id="shoppingtable" class="w3-ul w3-card-4 w3-padding-large">
+                
+              </ul>
+          
+             
+            
+            
+          </div>
+          
+          <footer class="w3-container mt-4 ">
+            <p><button id="proceedtopayment" class="w3-btn w3-block w3-blue">Proceed to Payment<span class="text-warning" id="paymentsum"></span></button></p>
+          </footer>
+        </div>
+   
+  </div>
+  </div>
+<!--end of modal-->
+
+
+
+
+
+
+<!--modal -->
+<div id="id05" class="w3-modal w3-animate-opacity ">
+  <div class="w3-modal-content w3-animate-zoom  ">
+  
+      <span onclick="document.getElementById('id05').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+      <div class="  ">
+        <div class="w3-card-4 ">
+          
+          <header class="w3-container  w3-blue">
+            <h1  class="w3-center w3-xlarge w3-padding-16">Wishlist</h1>
+          </header>
+          <div class="w3-center">
+          
+        </div>
+         
+           
+         
+           
+              
+                  <ul id="wishtable" class="w3-ul w3-card-4 w3-padding-large">
+                
+              </ul>
+          
+             
+            
+            
+          </div>
+      <form action="http://localhost:3000/MusicPage" method="POST">
+          <footer class="w3-container mt-4">
+            <input id="shoppinglistinputstring" style="display: none;" type="text" class="form-control" name="savedlist" >
+            <input id="shoppinglistinputindex" style="display: none;" type="text" class="form-control" name="index" >
+            <p><button id="saveshoppinglist" type="submit" class="w3-btn w3-block w3-blue">Save list</button></p>
+          </footer>
+          </form>
+        </div>
+   
+  </div>
+  </div>
+<!--end of modal-->
+
+
+
+
+
+
+
+
+<div id="id04" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+    <div class="w3-center"><br>
+      <span onclick="document.getElementById('id04').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+      
+    </div>
+
+    <div class="w3-container" >
+      <div id="signupsection" class="w3-section">
+        <label><b>Username</b></label>
+        <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="usrname" required>
+        <label><b>Password</b></label
+        <input class="w3-input w3-border" type="text" placeholder="Enter Password" name="psw" required>
+        <button class="w3-button w3-block btn w3-green w3-section w3-padding" type="submit">Login</button>
+        <a id="signupgenerator" class="text-white w3-button w3-block btn btn-primary  w3-padding" >Sign UP</a>
+       
+        <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="" id="imagegallery">
+  
+</div>
+
+</div>
+
+
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="../views/MusicPage#" class="w3-bar-item no w3-button  w3-hover-black">«</a>
+      <div id="paginationcontent">
+      <a id="firstpage1" href="../views/MusicPage#" class="w3-bar-item no w3-button  w3-hover-black">1</a>
+      <a  href="../views/MusicPage#" class="w3-bar-item no w3-button w3-hover-black">2</a>
+      <a href="../views/MusicPage#" class="w3-bar-item no w3-button w3-hover-black">3</a>
+      <a href="../views/MusicPage#" class="w3-bar-item no w3-button w3-hover-black">4</a>
+
+    </div>
+      <a href="../views/MusicPage#" class="w3-bar-item no w3-button  w3-hover-black">»</a>
+    </div>
+  </div>
+
+  <!-- Images of Me -->
+  
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+function w3_opens() {
+    document.getElementById("optionsbar").style.display = "block";
+  
+}
+ 
+function w3_closes() {
+    document.getElementById("optionsbar").style.display = "none";
+  
+}
+</script>
+
+<script src="../dist/demopage.js"></script>
+
+
+<!-- Mirrored from www.w3schools.com/w3css/tryw3css_templates_portfolio.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Jul 2018 00:44:46 GMT -->
+</body></html>
