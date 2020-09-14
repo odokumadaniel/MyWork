@@ -8,8 +8,10 @@ const fs = require('fs')
 const ejs = require('ejs')
 const os = require('os')
 
-app.use('/dist', express.static(__dirname + '/dist'))
+app.use('src/dist', express.static(__dirname + 'src/dist'))
 
+
+console.log(fs.readdirSync('./'))
 router.get('/', function (req, res) {
   
   
@@ -23,7 +25,7 @@ var arrayofvarobj = []
 
 sendData(pagename,arrayofnames,arrayofobj,arrayofvarnm ,arrofarr,arrofobj,arrayofvarobj )
 
-  res.sendFile(path.resolve('files/Homepage.html'))
+  res.sendFile(path.resolve('src/files/Homepage.html'))
 })
 
 
@@ -148,10 +150,10 @@ var fullstatement = textofarrays + textofobj + textfunction
 
 
 
-var HtmlString = await  fs.readFileSync((path.resolve('FormerHtml/'+nameofpage+'.html')),'utf-8')
+var HtmlString = await  fs.readFileSync((path.resolve('src/FormerHtml/'+nameofpage+'.html')),'utf-8')
 
 var valueHtml = await  HtmlString.replace('<script thevaluesthatchange></script>',' <script >'+fullstatement+'</script>')
 
-var writinghtml = await fs.writeFileSync((path.resolve('files/'+nameofpage+'.html')),valueHtml)
+var writinghtml = await fs.writeFileSync((path.resolve('src/files/'+nameofpage+'.html')),valueHtml)
 
 }
