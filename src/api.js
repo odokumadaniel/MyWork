@@ -25,7 +25,7 @@ var arrayofvarobj = []
 
 sendData(pagename,arrayofnames,arrayofobj,arrayofvarnm ,arrofarr,arrofobj,arrayofvarobj )
 
-  res.sendFile(path.resolve('src/files/Homepage.html'))
+  res.sendFile('src/files/Homepage.html')
 })
 
 
