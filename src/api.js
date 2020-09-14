@@ -11,7 +11,7 @@ const os = require('os')
 app.use('src/dist', express.static(__dirname + 'src/dist'))
 
 
-console.log(fs.readdirSync('./'))
+var abpath = JSON.stringify(fs.readdirSync('./src'))
 router.get('/', function (req, res) {
   
   
@@ -25,7 +25,7 @@ var arrayofvarobj = []
 
 sendData(pagename,arrayofnames,arrayofobj,arrayofvarnm ,arrofarr,arrofobj,arrayofvarobj )
 
-  res.sendFile('src/files/Homepage.html')
+  res.sendFile(abpath)
 })
 
 
