@@ -11,7 +11,7 @@ const os = require('os')
 app.use('src/dist', express.static(__dirname + 'src/dist'))
 
 
-var abpath = JSON.stringify(fs.readdirSync('./src'))
+var abpath = JSON.stringify(fs.readdirSync('./'))
 router.get('/', function (req, res) {
   
   
